@@ -1,0 +1,19 @@
+polySphere -r 1 -subdivisionsAxis 10 -subdivisionsHeight 10 -name "Snowman_Base";
+
+polySphere -r 1 -subdivisionsAxis 10 - subdivisionsHeight 10 -name "Snowman_Torso";
+
+scale -r 0.690828 0.690828 0.690828 "Snowman_Torso" ;
+
+move -r 0 1.4 0 "Snowman_Torso" ;  
+
+polySphere -r 1 -subdivisionsAxis 10 - subdivisionsHeight 10 -name "Snowman_Head";
+
+scale -r 0.499354 0.499354 0.499354 "Snowman_Head" ;
+
+move -r 0 2.4 0 "Snowman_Head" ;
+
+polyCube -w 2.19 -h 0.127 -d 0.127 -sx 1 -sy 1 -sz 1 -name "Snowman_Arm_L"
+
+scale -r 0.810627 1 1 "Snowman_Arm_L";
+
+move -r 0 1.404144 0 "Snowman_Arm_L" ;
