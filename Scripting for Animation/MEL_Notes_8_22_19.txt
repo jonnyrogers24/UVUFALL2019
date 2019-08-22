@@ -1,0 +1,28 @@
+Common Variables
+	-float
+	-int
+	-string
+	-array
+
+EX.
+
+string $name;
+$name = "Ryley";
+
+	//all variables have to start with "$"
+	//all lines end with ";"
+	//once the line has been defined as a string, it stays a string unless you start
+	your code with an open/close curly brackets.
+
+ARRAY
+//to set up an array you have to add "[]" following the datatype
+
+EX.
+
+string $ages[]; 
+$ages[0] = "Tyler";
+$ages[1] = "Jesse";
+$ages[2] = "Pam";
+print $ages; 
+
+	//once the "[]" have been defined, you don't need to rewrite it. 
