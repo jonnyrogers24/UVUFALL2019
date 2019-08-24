@@ -1,0 +1,52 @@
+polySphere -r 1 -subdivisionsAxis 10 -subdivisionsHeight 10 -name "Snowman_Base";
+
+polySmooth  -mth 0 -sdt 2 -ovb 1 -ofb 3 -ofc 0 -ost 0 -ocr 0 -dv 1 -bnr 1 -c 1 -kb 1 -ksb 1 -khe 0 -kt 1 -kmb 1 -suv 1 -peh 0 -sl 1 -dpe 1 -ps 0.1 -ro 1 -ch 1 "Snowman_Base";
+
+polySphere -r 1 -subdivisionsAxis 10 - subdivisionsHeight 10 -name "Snowman_Torso";
+
+scale -r 0.690828 0.690828 0.690828 "Snowman_Torso" ;
+
+move -r 0 1.4 0 "Snowman_Torso" ;  
+
+polySmooth  -mth 0 -sdt 2 -ovb 1 -ofb 3 -ofc 0 -ost 0 -ocr 0 -dv 1 -bnr 1 -c 1 -kb 1 -ksb 1 -khe 0 -kt 1 -kmb 1 -suv 1 -peh 0 -sl 1 -dpe 1 -ps 0.1 -ro 1 -ch 1 "Snowman_Torso";
+
+polySphere -r 1 -subdivisionsAxis 10 - subdivisionsHeight 10 -name "Snowman_Head" ;
+
+scale -r 0.499354 0.499354 0.499354 "Snowman_Head" ;
+
+move -r 0 2.4 0 "Snowman_Head" ;
+
+polySmooth  -mth 0 -sdt 2 -ovb 1 -ofb 3 -ofc 0 -ost 0 -ocr 0 -dv 1 -bnr 1 -c 1 -kb 1 -ksb 1 -khe 0 -kt 1 -kmb 1 -suv 1 -peh 0 -sl 1 -dpe 1 -ps 0.1 -ro 1 -ch 1 "Snowman_Head" ;
+
+polyCube -w 2.19 -h 0.127 -d 0.127 -sx 1 -sy 1 -sz 1 -name "Snowman_Arm_L" ;
+
+move -r -os -wd 1.020666 1.581098 0 "Snowman_Arm_L" ;
+
+polyCube -w 2.19 -h 0.127 -d 0.127 -sx 1 -sy 1 -sz 1 -name "Snowman_Arm_R" ;
+
+move -r -os -wd -1.020666 1.581098 0 "Snowman_Arm_R" ;
+
+polyCone -r 1 -h 2 -sx 20 -sy 3 -name "Snowman_Nose";
+
+rotate -r -os -fo -90 0 0 "Snowman_Nose";
+
+scale -r 0.1 0.3 0.1 "Snowman_Nose" ;
+
+move -r -os -wd 0 .7 2.465251 "Snowman_Nose" ;
+
+move -r -os -wd 0 0 0.036786 Snowman_Nose.e[20:39] ;
+
+polySphere -r 1 -subdivisionsAxis 10 -subdivisionsHeight 10 -name "Snowman_Eye_L";
+polySmooth  -mth 0 -sdt 2 -ovb 1 -ofb 3 -ofc 0 -ost 0 -ocr 0 -dv 1 -bnr 1 -c 1 -kb 1 -ksb 1 -khe 0 -kt 1 -kmb 1 -suv 1 -peh 0 -sl 1 -dpe 1 -ps 0.1 -ro 1 -ch 1 "Snowman_Eye_L";
+
+scale -r .072 .072 .072 "Snowman_Eye_L";
+
+move -r -os -wd -0.15 2.5 -0.4 "Snowman_Eye_L";
+
+polySphere -r 1 -subdivisionsAxis 10 -subdivisionsHeight 10 -name "Snowman_Eye_R";
+
+polySmooth  -mth 0 -sdt 2 -ovb 1 -ofb 3 -ofc 0 -ost 0 -ocr 0 -dv 1 -bnr 1 -c 1 -kb 1 -ksb 1 -khe 0 -kt 1 -kmb 1 -suv 1 -peh 0 -sl 1 -dpe 1 -ps 0.1 -ro 1 -ch 1 "Snowman_Eye_R";
+
+scale -r .072 .072 .072 "Snowman_Eye_R";
+
+move -r -os -wd 0.15 2.5 -0.4 "Snowman_Eye_R";
