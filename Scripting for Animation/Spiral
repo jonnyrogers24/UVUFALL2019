@@ -1,0 +1,98 @@
+{
+string $tempObj[];
+string $obj;
+string $allObjs[];
+string $name = "Ring";
+string $group = "Group_Test";
+
+string $sels[] = `ls -selection`;
+$tempObj = `polyUnite -ch 1 -mergeUVSets 1 -centerPivot -name $sels`;
+$obj = $tempObj[0]; 
+print $obj;
+
+//0
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//1
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//2
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//3
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//4
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//5
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//6
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//7
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//8
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//9
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+//10
+$tempObjs = `duplicate -rr $obj`;
+$obj = $tempObjs[0];
+move -r 0 .25 0 $obj;
+rotate -r 0 25 0 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+print ($allObjs);
+print (size($allObjs));
+$tempObjs = `polyUnite -ch 1 -mergeUVSets 1 -centerPivot $allObjs`;
+$obj = $tempObjs[0];
+$obj = `rename $obj $name`;
+
+DeleteAllHistory;
+delete -all -constructionHistory;
+
+group -n $group $obj;
+}
