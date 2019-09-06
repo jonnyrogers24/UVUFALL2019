@@ -1,0 +1,62 @@
+{
+string $obj;
+string $tempObj; 
+string $allObjs[]; 
+string $tempobjs[];
+string $name = "Car";
+string $group = "Geo";
+
+string $sels[] = `ls -sl`; 
+$tempObj = $sels[0];
+$obj = $tempObj;
+
+scale -r 2 1 3 $obj; 
+$allObjs[size($allObjs)] = $obj;
+print $allObjs; 
+
+$tempObjs = `polyCube -w 1 -h 1 -d 1`; 
+$obj = $tempObjs[0];
+scale -r 2.25 1 5 $obj; 
+move -r 0 -0.75 0.2 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+$tempObjs = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0`;
+$obj = $tempObjs[0]; 
+rotate -r -os -fo 0 0 -90 $obj;
+scale -r .75 0.25 .75 $obj;
+move -r 1.25 -.85 -1.5 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+$tempObjs = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0`;
+$obj = $tempObjs[0]; 
+rotate -r -os -fo 0 0 -90 $obj;
+scale -r .75 0.25 .75 $obj;
+move -r -1.25 -.85 -1.5 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+$tempObjs = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0`;
+$obj = $tempObjs[0]; 
+rotate -r -os -fo 0 0 -90 $obj;
+scale -r .75 0.25 .75 $obj;
+move -r -1.25 -.85 2.25 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+$tempObjs = `polyCylinder -r 1 -h 2 -sx 20 -sy 1 -sz 1 -ax 0 1 0`;
+$obj = $tempObjs[0]; 
+rotate -r -os -fo 0 0 -90 $obj;
+scale -r .75 0.25 .75 $obj;
+move -r 1.25 -.85 2.25 $obj;
+$allObjs[size($allObjs)] = $obj;
+
+print ($allObjs);
+print (size($allObjs));
+$tempObjs = `polyUnite -ch 1 -mergeUVSets 1 -centerPivot $allObjs`;
+$obj = $tempObjs[0];
+$obj = `rename $obj $name`;
+
+DeleteAllHistory;
+delete -all -constructionHistory;
+
+group -n $group $obj;
+
+}
