@@ -1,0 +1,32 @@
+{
+
+	proc MakeCube() 
+	{
+		string $obj;
+		string $objects[];
+		
+		$obj = `polyCube -w 1 -h 1 -d 1`;
+		`move -a -worldSpace 0 0 0 $obj[0]`; 
+		$objects[size($objects)] = $obj[0];
+		
+	}
+
+{
+
+	proc Scatter()
+    	{	
+    	    string $obj[0];
+		    $obj = `polyCube -w 1 -h 1 -d 1`;
+    		string $movement[] = `move -r 10 10 10 $obj`; 
+    		
+    		int $size = `size($movement)`;
+    		float $randNum = `rand $size`; 
+    		int $index = `floor $randNum`;
+    		
+    		//print ($movement[$index]); 
+    	
+    	} 
+}
+{
+ Scatter();   
+}
