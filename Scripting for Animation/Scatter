@@ -1,0 +1,30 @@
+{
+
+	proc Scatter(float $amount, float $minX, float $maxX, float $minY, float $maxY, float $minZ, float $maxZ) 
+    	{	
+			string $tempObj[];
+			string $obj;
+			string $allObjs[];
+			string $tempObjs[];
+			float $moveX = `rand $minX $maxX`; 
+			float $moveY = `rand $minY $maxY`;
+			float $moveZ = `rand $minZ $maxZ`;
+			
+			$tempObj = `polyCube -w 1 -h 1 -d 1 `;
+			$obj = $tempObj[0]; 
+			move -a -worldSpace $moveX $moveY $moveZ $obj;
+			$allObjs[size($allObjs)] = $obj;
+
+			for ($i=0; $i<size($amount); $i++)
+				{
+					$tempObjs = `duplicate -rr $obj`;
+					$obj = $tempObjs[0];
+			        move -a -worldSpace $moveX $moveY $moveZ $obj;
+					$allObjs[size($allObjs)] = $obj; 
+				} 
+    	
+    	} 
+}
+{
+ Scatter(5, -10, 10, -10, 10, -10, 10);   
+}
