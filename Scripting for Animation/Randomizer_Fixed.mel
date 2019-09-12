@@ -1,0 +1,38 @@
+{
+	proc Scatter(float $amount, float $minX, float $maxX, float $minY, float $maxY, float $minZ, float $maxZ, 
+	float $minRotateX, float $maxRotateX, float $minRotateY, float $maxRotateY, float $minRotateZ, float $maxRotateZ) 
+    	{	
+			string $tempObj[];
+			string $obj;
+			string $allObjs[];
+			string $tempObjs[];
+			
+			string $sels[] = `ls -selection`;
+			
+			if (size($sels) < 1)
+            error("Need to select more objects");
+			
+			$tempObj = $sels; 
+			$obj = $tempObj[0]; 
+			$allObjs[size($allObjs)] = $obj;
+            
+			for ($i=0; $i<$amount; $i++)
+				{
+	    		    float $moveX = `rand $minX $maxX`;
+        			float $moveY = `rand $minY $maxY`;
+        			float $moveZ = `rand $minZ $maxZ`;
+        		    float $rotateX = `rand $minX $maxX`;
+        			float $rotateY = `rand $minY $maxY`;
+        			float $rotateZ = `rand $minZ $maxZ`;
+					$tempObjs = `duplicate -rr $obj`;
+					$obj = $tempObjs[0];
+			        move -a -worldSpace $moveX $moveY $moveZ $obj;
+			        rotate -r -os -fo $rotateX $rotateY $rotateZ $obj;
+					$allObjs[size($allObjs)] = $obj; 					
+				}    	
+    	} 
+}
+
+{
+ Scatter(99, -10, 10, -10, 10, -10, 10, -360, 360, -360, 360, -360, 360 );   
+}
