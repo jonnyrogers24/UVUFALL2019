@@ -1,0 +1,62 @@
+/*
+GOAL: renaming selection with incremental numbers starting at 1
+(L_Leg_##_Geo / (Prefix_##_Suffix))
+	-number of "#" represents minimum number of digits/characters for the number.
+
+seperate/tokenize the input string to prefix and suffix
+
+Get selection with ls -sl and assign to list
+
+loop through each selection
+	need and interator (number) to insert into "##" part of name string (important that this starts at 1)
+	need to concatenate prefix + iterator + suffix
+	rename individual selection
+	
+does "#" exist
+if it doesnt exist, throw an error
+if there are separate groupings of "#", throw error X (L_##_Leg_##_Geo) X
+else create padding
+
+We need to know how many "#" characters exist to determine minimum digits/characters
+*need iterator to count up from 1
+*need prefix and suffix 
+*combine pieces to make name
+
+
+*/
+proc $IncrementalRenamer (string $name)
+{
+	string $name = "L_Leg_###_Geo"; //input string
+	string $tokens[]; 
+	string $sels[];
+	
+	tokenize $name "#" $tokens; //["L_Leg_","_Geo"] 
+
+	$sels = `ls -sl`; //makes a list of the objects selected in maya
+	
+	if(size($tokens) != 2)
+	{
+		error("input string must be in the form of \"Prefix_##_Suffix\"");
+	}
+	
+	int $digitsDelimiter = size($name) - size($tokens[0]) - size($tokens[1]);
+	
+	for($i = 0; i<size($sels); i++)
+	{
+		//$sels[$i] : each selection
+		//$i + 1 : iterator value to insert into the name
+		
+		int $digitsIter = `size((string) ($i + 1))`; 
+		int $numPads = $digitsDelimiter - $digitsIter;
+		string $pad = ""; 
+		
+		for($j = 0; $j < $numPads; $j++)
+		{
+			$pad = $pad + "0"; 
+		}
+		
+		string $newName = $tokens[0] + $pad + ($i + 1) + $tokens[1]; 
+		rename $sels[$i] $newName; 
+	}
+
+}
