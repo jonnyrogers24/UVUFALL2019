@@ -1,0 +1,31 @@
+{
+	proc RenamerScript(string $names)
+	  {
+	    string $sels[] = `ls -sl`;
+		string $tokens[]; 
+		tokenize $names "#" $tokens; 
+		print $tokens; 
+		string $prefix = $tokens[0];
+		string $suffix = $tokens[1];
+		int $padding =  size($names) - size($prefix) - size($suffix);
+		print $padding;
+		int $num; 
+		string $zeroString; 
+		int $zeroes; 
+		for($i = 0; $i<size($sels); $i++)
+			{
+				$num++; 
+				if($zeroes = $padding - $i)
+					{ 
+							for($i = 0; $i<size($zeroes); $i++)
+								{
+									$zeroString = $zeroString + "0"; 
+								}
+					}
+			}
+		rename ($prefix + $zeroString + $num + $suffix) $sels[$i]; 
+	  }
+}
+{
+    RenamerScript("Jonny_##_Geo");
+}
