@@ -7,6 +7,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="ObjectSetActive.cs" t="Include" />
+          <e p="ObjectSetActive2.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

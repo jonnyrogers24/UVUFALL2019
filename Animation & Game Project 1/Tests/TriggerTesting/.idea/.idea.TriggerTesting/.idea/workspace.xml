@@ -10,17 +10,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ObjectSetActive.cs" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ObjectSetActive.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="315">
+              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
-                <marker date="1568956787662" expanded="false" signature="6:78" ph="..." />
-                <marker date="1568956787662" expanded="true" signature="124:298" ph="{...}" />
-                <marker date="1568956787662" expanded="true" signature="177:296" ph="{...}" />
-                <marker date="1568956787662" expanded="true" signature="234:290" ph="{...}" />
+                <marker date="1569288120544" expanded="false" signature="6:78" ph="..." />
+                <marker date="1569288120544" expanded="true" signature="124:476" ph="{...}" />
+                <marker date="1569288120544" expanded="true" signature="219:302" ph="{...}" />
+                <marker date="1569288120544" expanded="true" signature="351:474" ph="{...}" />
+                <marker date="1569288120544" expanded="true" signature="403:462" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectSetActive2.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive2.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding>
+                <marker date="1569288253947" expanded="false" signature="6:78" ph="..." />
+                <marker date="1569288253947" expanded="true" signature="125:336" ph="{...}" />
+                <marker date="1569288253947" expanded="true" signature="210:334" ph="{...}" />
+                <marker date="1569288253947" expanded="true" signature="262:322" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -29,6 +45,7 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive2.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://D:/UVU SPRING 2019/UVU_SPRING_2019/DGM2610 - Game Design I/Worm_Game/Assets/Scripts/Beak_Trigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/UVU SPRING 2019/UVU_SPRING_2019/DGM2610 - Game Design I/Worm_Game/Assets/Scripts/PlatypusSetActive.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive.cs" root0="FORCE_HIGHLIGHTING" />
@@ -38,6 +55,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/ObjectSetActive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ObjectSetActive.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ObjectSetActive2.cs" />
       </list>
     </option>
   </component>
@@ -50,8 +68,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1927" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2632" />
+    <option name="y" value="-17" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -60,6 +79,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -72,7 +92,6 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
@@ -112,11 +131,12 @@
       <option name="presentableId" value="Default" />
       <updated>1568953881204</updated>
       <workItem from="1568953887285" duration="3586000" />
+      <workItem from="1569285738937" duration="2554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3586000" />
+    <option name="totallyTimeSpent" value="6140000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -128,31 +148,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Unit Tests" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="NuGet" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5131291" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="7" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,13 +188,21 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/ObjectSetActive.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="150">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <marker date="1569288120544" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569288120544" expanded="true" signature="124:476" ph="{...}" />
+            <marker date="1569288120544" expanded="true" signature="219:302" ph="{...}" />
+            <marker date="1569288120544" expanded="true" signature="351:474" ph="{...}" />
+            <marker date="1569288120544" expanded="true" signature="403:462" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/ObjectSetActive.cs" />
     <entry file="file://D:/UVU SPRING 2019/UVU_SPRING_2019/DGM2610 - Game Design I/Worm_Game/Assets/Scripts/PlatypusSetActive.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -183,13 +211,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
           <folding>
-            <marker date="1568956787662" expanded="false" signature="6:78" ph="..." />
-            <marker date="1568956787662" expanded="true" signature="124:298" ph="{...}" />
-            <marker date="1568956787662" expanded="true" signature="177:296" ph="{...}" />
-            <marker date="1568956787662" expanded="true" signature="234:290" ph="{...}" />
+            <marker date="1569288120544" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569288120544" expanded="true" signature="124:476" ph="{...}" />
+            <marker date="1569288120544" expanded="true" signature="219:302" ph="{...}" />
+            <marker date="1569288120544" expanded="true" signature="351:474" ph="{...}" />
+            <marker date="1569288120544" expanded="true" signature="403:462" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ObjectSetActive2.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <marker date="1569288253947" expanded="false" signature="6:78" ph="..." />
+            <marker date="1569288253947" expanded="true" signature="125:336" ph="{...}" />
+            <marker date="1569288253947" expanded="true" signature="210:334" ph="{...}" />
+            <marker date="1569288253947" expanded="true" signature="262:322" ph="{...}" />
           </folding>
         </state>
       </provider>
