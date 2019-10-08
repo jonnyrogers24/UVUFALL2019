@@ -1,0 +1,42 @@
+{
+	proc Adder(int $addThis, int $addThat)
+	{
+		int $sum = $addThis + $addThat;
+		print $sum;
+	}
+	
+	proc Subtractor(int $subThis, int $subThat)
+	{
+		int $sum = $subThis - $subThat;
+		print $sum;
+	}
+	
+	proc Divider(int $DivThis, int $DivThat)
+	{
+		int $sum = $DivThis / $DivThat;
+		print $sum;
+	}
+	
+	proc Multiplier(int $MultThis, int $MultThat)
+	{
+		int $sum = $MultThis * $MultThat;
+		print $sum;
+	}
+	
+}
+
+{
+	Adder(10,10);
+}
+
+{
+	Subtractor(10,10);
+}
+
+{
+	Divider(10,10);
+}
+
+{
+	Multiplier(10,10);
+}
