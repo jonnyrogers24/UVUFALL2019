@@ -1,0 +1,135 @@
+//Add Function
+{
+	proc float Add(float $values[])
+	{
+		$sum = 0; 
+		for($i=0; $i < size($values); $i++)
+		{
+			$sum = $sum + $values[$i];
+		}
+		print $sum;
+		return $sum; 
+	}
+}
+{
+	Add({100,235,2,875,62,94,667});
+}
+
+//Subtract Function
+{
+	proc float Subtract(float $values[])
+	{
+		if(size($values) > 2)
+			{
+				error "Can only subtract 2 numbers";
+			}
+		else
+    		{
+    			float $sum;
+    			$sum = $values[0] - $values[1];
+    			print $sum; 
+    			return $sum; 
+    		}
+	}
+}
+
+{
+	Subtract({175,50});
+}
+
+//Multiply Function
+{
+	proc float Multiplier(float $values[])
+	{
+		$sum = 1; 
+		for($i = 0; $i < size($values); $i++)
+		{
+			$sum = $sum * $values[$i];
+		}
+		print $sum; 
+		return $sum; 
+	}
+}
+
+{
+	Multiplier({4,4});
+}
+
+//Divide Function
+{
+	proc float Divider(float $values[])
+	{
+		if(size($values) > 2)
+			{
+				error "Can only divide 2 numbers";
+			}
+		else
+    		{
+    			float $sum;
+    			$sum = $values[0] / $values[1];
+    			print $sum; 
+    			return $sum; 
+    		}
+	}		
+}
+
+//Mean Function
+{
+	proc float Mean(float $values[])
+	{	float $sum; 
+		$sum = 0; 
+		float $average; 
+		for($i = 0; $i < size($values); $i++)
+		{
+			$sum = $sum + $values[$i]; 
+		}
+		print ("Sum of Numbers is" + " " + $sum + "\n"); 
+		
+		$average = $sum / size($values); 
+		print ("Average of Numbers is" + " " + $average); 
+		return $average; 
+	}
+}
+
+{
+    Mean({2,10,5,4});
+}
+
+//Median Function
+{
+    proc float Median(float $values[])
+    {
+        $values = `sort $values`;
+        print ("Values Sorted:" + "\n");
+        print $values; 
+        float $median; 
+        
+        int $sortedValues = size($values);
+        print ("Number of Values:" + "\n"); 
+        print ($sortedValues + "\n");  
+        
+        if($sortedValues % 2 != 0)
+            {
+                int $middleValue = ($sortedValues / 2);
+                $median = $values[$middleValue]; 
+                
+                print ("Median:" + "\n" + $median);   
+                return $median; 
+            }
+        if($sortedValues % 2 == 0)
+            {
+                int $middleValue = ($sortedValues / 2);
+                $median = ($values[$middleValue] + $values[$middleValue - 1]) / 2;
+                
+                print ("Median:" + "\n" + $median);  
+                return $median;   
+            }
+               
+        return 0; 
+    }
+}
+
+{
+    Median({10,-1,50,25,-100,20});
+}
+
