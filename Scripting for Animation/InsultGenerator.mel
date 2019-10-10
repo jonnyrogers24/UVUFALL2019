@@ -1,0 +1,49 @@
+{
+	proc InsultGenerator(int $age)
+	{
+    	print ("Hey " + Names() + "," + Insult() + "\n"); 
+    	print ("And you look like you're " + AgeIncrease($age) + "years old!"); 
+    }
+
+}
+
+{
+	global proc int AgeIncrease(int $currentAge)
+		{
+			float $factor = 1.6;
+			float $newAge = `ceil ($currentAge * $factor)`;
+			
+			return $newAge; 
+		}
+
+}
+
+{
+	global proc string Names()
+		{
+			string $names[] = {"Bill", "Bob", "Timmy", "Beatrice", "Gertrude"};
+			return $names[GenerateNum($names)];  
+		}
+}
+
+{
+	global proc string Insult()
+		{
+			string $insults[] = {"You Stink!", "You're old!", "You're Pretty...PRETTY UGLY!!"};
+			return $insults[GenerateNum($insults)]; 
+		}
+}
+
+{
+	global proc int GenerateNum(string $array[])
+		{
+			int $size = `size($array)`;
+			float $randNum = `rand $size`;
+			int $index = `floor $randNum`;
+			return $index; 
+		}	
+}
+
+{
+    InsultGenerator(30);
+}
