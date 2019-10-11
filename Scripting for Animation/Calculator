@@ -1,0 +1,75 @@
+{
+	proc Calculator(int $operation, float $nums[])
+	{
+		if ($operation == 1)
+		{
+			print (Add($nums) + "\n");
+		}
+		if($operation == 2)
+		{
+			print (Subtract($nums) + "\n");
+		}
+		if($operation == 3)
+		{
+			print (Multiplier($nums) + "\n");
+		}
+		if($operation == 4)
+		{
+			print (Divider($nums) + "\n");
+		}
+	}
+
+	global proc float Add(float $values[])
+	{
+		$sum = 0; 
+		for($i=0; $i < size($values); $i++)
+		{
+			$sum = $sum + $values[$i];
+		}
+		return $sum; 
+	}
+	
+	
+	global proc float Subtract(float $values[])
+	{
+		if(size($values) > 2)
+			{
+				error "Can only subtract 2 numbers";
+			}
+		else
+    		{
+    			float $sum;
+    			$sum = $values[0] - $values[1]; 
+    			return $sum; 
+    		}
+	}
+
+
+	global proc float Multiplier(float $values[])
+	{
+		$sum = 1; 
+		for($i = 0; $i < size($values); $i++)
+		{
+			$sum = $sum * $values[$i];
+		}
+		return $sum; 
+	}
+	
+	global proc float Divider(float $values[])
+	{
+		if(size($values) > 2)
+			{
+				error "Can only divide 2 numbers";
+			}
+		else
+    		{
+    			float $sum;
+    			$sum = $values[0] / $values[1];
+    			return $sum; 
+    		}
+	}
+}
+
+{
+    Calculator(4, {50,800,100});
+}
