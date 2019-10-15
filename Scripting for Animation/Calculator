@@ -1,22 +1,39 @@
 {
-	proc Calculator(int $operation, float $nums[])
+	proc float Calculator(int $operation, float $nums[])
 	{
+	    float $total; 
 		if ($operation == 1)
 		{
-			print (Add($nums) + "\n");
+			//print (Add($nums) + "\n");
+			$total = (Add($nums) + "\n");
 		}
 		if($operation == 2)
 		{
-			print (Subtract($nums) + "\n");
+			//print (Subtract($nums) + "\n");
+			$total = (Subtract($nums) + "\n");
 		}
 		if($operation == 3)
 		{
-			print (Multiplier($nums) + "\n");
+			//print (Multiplier($nums) + "\n");
+			$total = (Multiplier($nums) + "\n");
 		}
 		if($operation == 4)
 		{
-			print (Divider($nums) + "\n");
+			//print (Divider($nums) + "\n");
+			$total = (Divider($nums) + "\n");
 		}
+		if($operation == 5)
+		{
+		    //print (Mean($nums) + "\n");
+		    $total = (Mean($nums) + "\n");
+		}
+		if($operation == 6)
+		{
+		    //print (Median($nums) + "\n");
+		    $total = (Median($nums) + "\n");		    
+		}
+		print ($total); 
+		return $total;
 	}
 
 	global proc float Add(float $values[])
@@ -42,7 +59,7 @@
     		{
     			float $sum;
     			$sum = $values[0] - $values[1]; 
-				print ($values[$i] + " - ");
+				print ($values[0] + " - " + $values[1]);
 				print (" = ");
     			return $sum; 
     		}
@@ -71,13 +88,58 @@
     		{
     			float $sum;
     			$sum = $values[0] / $values[1];
-				print ($values[$i] + " / ");
+				print ($values[0] + " / " + $values[1]);
 				print (" = ");
     			return $sum; 
     		}
 	}
+	
+	global proc float Mean(float $values[])
+	{	float $sum; 
+		$sum = 0; 
+		float $average; 
+		for($i = 0; $i < size($values); $i++)
+		{
+			$sum = $sum + $values[$i]; 
+		}
+		print ("Sum of Numbers is" + " " + $sum + "\n"); 
+		
+		$average = $sum / size($values);  
+		return $average; 
+	}
+	
+	proc float Median(float $values[])
+    {
+        $values = `sort $values`;
+        print ("Values Sorted:" + "\n");
+        print $values; 
+        float $median; 
+        
+        int $sortedValues = size($values);
+        print ("Number of Values:" + "\n"); 
+        print ($sortedValues + "\n");  
+        
+        if($sortedValues % 2 != 0)
+            {
+                int $middleValue = ($sortedValues / 2);
+                $median = $values[$middleValue]; 
+                
+                print ("Median:" + "\n" + $median);   
+                return $median; 
+            }
+        if($sortedValues % 2 == 0)
+            {
+                int $middleValue = ($sortedValues / 2);
+                $median = ($values[$middleValue] + $values[$middleValue - 1]) / 2;
+                print ("Median is" + "\n");
+                return $median;   
+            }
+               
+        return 0; 
+    }
+
 }
 
 {
-    Calculator(4, {50,800,100});
+    Calculator(1, {50,800,100,20,87,60});
 }
