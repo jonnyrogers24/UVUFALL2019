@@ -1,0 +1,17 @@
+{
+	proc XFormValues()
+	{
+		string $sels[] = `ls -selection`;
+			xform -q -bb; 
+		float $xFormArr[]; 
+		for($i = 0; $i < size($sels); $i++ )
+		{
+			float $xFormStor[];
+			$xFormArr = `xform -q -bb`;
+			$xFormStor = $xFormArr;		
+		}				
+		print $xFormStor;
+	}
+	
+	
+}
