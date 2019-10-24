@@ -1,0 +1,45 @@
+{
+	global proc XFormValues()
+	{
+		string $sels[] = `ls -selection`;
+		
+		string $dups[] = `duplicate $sels`;
+		$dups = `polyUnite $dups`;
+		delete -ch $dups;
+		float $bBValues[]; 
+		
+		float $bBox[] = `xform -q -bb $dups[0]`;
+		print ("\n" + "Bounding Box Values:" + "\n");	
+		$bBValues = $bBox; 
+			
+		float $totalX;
+		float $totalY;
+		float $totalZ;
+		
+		float $xMin = $bBValues[0];
+		float $yMin = $bBValues[1];
+		float $zMin = $bBValues[2];
+		float $xMax = $bBValues[3];
+		float $yMax = $bBValues[4];
+		float $zMax = $bBValues[5];
+		
+		$totalX = ($xMin + $xMax) / 2;
+		print ($totalX + "\n");
+		
+		$totalY = ($yMin + $yMax) / 2;
+		print ($totalY + "\n");
+		
+		$totalZ = ($zMin + $zMax) / 2;
+		print ($totalZ + "\n");	
+		
+    	spaceLocator -p $totalX $totalY $totalZ;
+	}
+}
+
+{
+    XFormValues();
+}
+
+
+
+
