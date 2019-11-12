@@ -12,11 +12,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game_Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game_Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MenuManager.cs" />
       </list>
     </option>
@@ -71,6 +73,7 @@
       <workItem from="1573272926222" duration="307000" />
       <workItem from="1573273345888" duration="119000" />
       <workItem from="1573275708926" duration="2733000" />
+      <workItem from="1573524900435" duration="2084000" />
     </task>
     <servers />
   </component>

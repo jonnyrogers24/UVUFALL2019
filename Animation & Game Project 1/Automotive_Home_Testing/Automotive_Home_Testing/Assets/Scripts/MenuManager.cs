@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject mainMenu;
-
-    public GameObject resetTimerButton;
+    public GameObject subMenu;
     // Start is called before the first frame update
     void Start()
     {
         mainMenu.SetActive(true);
-        resetTimerButton.SetActive(false);
+        subMenu.SetActive(false);
         
     }
 
@@ -25,11 +24,17 @@ public class MenuManager : MonoBehaviour
     public void Menu()
     {
         mainMenu.SetActive(false);
-        resetTimerButton.SetActive(true);
+        subMenu.SetActive(true);
     }
-    
-    public void SubMenu()
+
+    public void QuitMenu()
     {
-        
+        SceneManager.LoadScene("Start_Menu_test"); 
+    }
+
+    public void Back()
+    {
+        mainMenu.SetActive(true);
+        subMenu.SetActive(false);
     }
 }

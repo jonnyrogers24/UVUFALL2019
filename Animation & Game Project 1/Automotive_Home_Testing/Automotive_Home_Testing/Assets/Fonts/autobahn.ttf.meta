@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f607314286dfa694aa5f2865e2f64532
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Autobahn
+  fontNames:
+  - Autobahn
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 80c80d531597e8e42a134db10171678f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
